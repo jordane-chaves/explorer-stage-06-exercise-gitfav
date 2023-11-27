@@ -135,26 +135,33 @@ header {
   background: var(--color-primary-hover);
 }
 
-main {
-  border: 1px solid var(--color-stroke);
-  border-radius: 1.2rem;
-
-  height: fit-content;
-  max-height: 100%;
-  min-height: 27.2rem;
-  overflow-y: auto;
-}
-
 table {
   background-color: var(--color-table-background);
   border-collapse: collapse;
+  border-radius: 1.2rem;
+  box-shadow: 0 0 0 1px var(--color-stroke);
 
   width: 100%;
+  overflow: hidden;
 }
 
 table * {
   color: var(--color-text);
   font-size: 2rem;
+}
+
+tbody {
+  display: block;
+  max-height: 52rem;
+
+  overflow-y: auto;
+}
+
+thead,
+tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
 }
 
 thead th {
@@ -166,6 +173,10 @@ thead th {
 
 .empty-table {
   display: none;
+}
+
+.empty-table tr {
+  height: 100%;
 }
 
 .empty-table td div {
@@ -187,13 +198,13 @@ thead th {
   font-size: 4rem;
 }
 
-main:not(:has(tbody.users > tr)),
 table:not(:has(tbody.users > tr)) {
   height: 100%;
 }
 
 table:not(:has(tbody.users > tr)) .empty-table {
   display: table-row-group;
+  height: 100%;
 }
 
 tbody tr {
@@ -216,6 +227,8 @@ td.user {
   display: flex;
   gap: 1.6rem;
   align-items: center;
+
+  width: max-content;
 }
 
 td.user img {

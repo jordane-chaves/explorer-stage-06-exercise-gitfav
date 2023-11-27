@@ -38,54 +38,32 @@
         </div>
       </header>
 
-      <main>
-        <table>
-          <thead>
-            <tr>
-              <th>Usuário</th>
-              <th>Repositórios</th>
-              <th>Seguidores</th>
-              <th>Ação</th>
-            </tr>
-          </thead>
+      <table>
+        <thead>
+          <tr>
+            <th>Usuário</th>
+            <th>Repositórios</th>
+            <th>Seguidores</th>
+            <th>Ação</th>
+          </tr>
+        </thead>
 
-          <tbody class="users">
-            <!-- <tr>
-              <td class="user">
+        <tbody class="users"></tbody>
+
+        <tbody class="empty-table">
+          <tr>
+            <td colspan="4">
+              <div>
                 <img
-                  src="https://github.com/jordane-chaves.png"
-                  alt="Imagem de Jordane Chaves"
+                  src="./src/assets/star.svg"
+                  alt="Desenho de uma estrela"
                 />
-
-                <a href="https://github.com/jordane-chaves" target="_blank">
-                  <p>Jordane Chaves</p>
-                  <span>/jordane-chaves</span>
-                </a>
-              </td>
-
-              <td class="repos">41</td>
-              <td class="followers">6</td>
-              <td>
-                <button class="remove">Remover</button>
-              </td>
-            </tr> -->
-          </tbody>
-
-          <tbody class="empty-table">
-            <tr>
-              <td colspan="4">
-                <div>
-                  <img
-                    src="./src/assets/star.svg"
-                    alt="Desenho de uma estrela"
-                  />
-                  <p>Nenhum favorito ainda</p>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </main>
+                <p>Nenhum favorito ainda</p>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </body>
 </html>

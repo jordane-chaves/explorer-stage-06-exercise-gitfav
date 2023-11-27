@@ -31,6 +31,12 @@ export class Favorite {
 
       const user = await GithubUsers.search(username)
 
+      const userWasFound = user && user.login
+
+      if (!userWasFound) {
+        throw new Error('Usuário não encontrado.')
+      }
+
       this.#storage.insert(user)
     } catch (error) {
       alert(error.message)
