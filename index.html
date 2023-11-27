@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+
+    <script type="module" src="./src/js/main.js" defer></script>
+
+    <title>GitFav</title>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <img src="./src/assets/logo.svg" alt="Logomarca GitFav" />
+
+        <div class="search">
+          <label for="input-search" class="sr-only">Usuário do Github</label>
+          <input
+            id="input-search"
+            type="text"
+            placeholder="Digite o Github username que quer favoritar"
+          />
+
+          <button>
+            <img src="./src/assets/star-icon.svg" alt="Ícone de uma estrela" />
+
+            Favoritar
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <table>
+          <thead>
+            <tr>
+              <th>Usuário</th>
+              <th>Repositórios</th>
+              <th>Seguidores</th>
+              <th>Ação</th>
+            </tr>
+          </thead>
+
+          <tbody class="users">
+            <!-- <tr>
+              <td class="user">
+                <img
+                  src="https://github.com/jordane-chaves.png"
+                  alt="Imagem de Jordane Chaves"
+                />
+
+                <a href="https://github.com/jordane-chaves" target="_blank">
+                  <p>Jordane Chaves</p>
+                  <span>/jordane-chaves</span>
+                </a>
+              </td>
+
+              <td class="repos">41</td>
+              <td class="followers">6</td>
+              <td>
+                <button class="remove">Remover</button>
+              </td>
+            </tr> -->
+          </tbody>
+
+          <tbody class="empty-table">
+            <tr>
+              <td colspan="4">
+                <div>
+                  <img
+                    src="./src/assets/star.svg"
+                    alt="Desenho de uma estrela"
+                  />
+                  <p>Nenhum favorito ainda</p>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </main>
+    </div>
+  </body>
+</html>
